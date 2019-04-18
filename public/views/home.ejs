@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+<div class="content">
+    <form method="get">
+        <h4>Choisissez un objet :</h4>
+        <div class="block-form">
+            <input type="radio" name="typeObjet" id="cube" value="Cube">
+            <label for="cube">Cube</label>
+
+            <input type="radio" name="typeObjet" id="cylindre" value="Cylindre">
+            <label for="cylindre">Cylindre</label>
+
+            <input type="radio" name="typeObjet" id="sphere" value="Sphere">
+            <label for="sphere">Sphère</label>
+        </div>
+        <h4>Que souhaitez-vous calculer ?</h4>
+        <div class="block-form surface">
+            <input type="radio" name="calcul" id="surface" value="Surface">
+            <label for="surface">Surface</label>
+            <input type="radio" name="calcul" id="volume" value="Volume">
+            <label for="volume">Volume</label>
+        </div>
+        <div id="validate"></div>
+        <div id="data-form"></div>
+
+        <input type="submit" id="submit">
+    </form>
+</div>
+    <% include ./partials/footer %>

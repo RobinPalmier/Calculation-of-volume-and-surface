@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    background: #f2f2f2;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.content{
+    margin: 20px;
+    color: #262626;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error, .queryError{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid red;
+    background: #ffcece;
+    color: red;
+    text-align: center;
+}
+
+.error span{
+    writing-mode: vertical-rl;
+    font-weight: 700;
+    text-orientation: mixed;
+    letter-spacing: 2px;
+    margin: -3px 0px -3px 3px;
+}
+
+.queryError{
+    width: auto;
+    margin-top: 10px;
+    border: none;
+    background: none;
+}
+
+.credits{
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+}
+
+.credits a{
+    color: #6ab4ff;
+}
+
+.credits a:hover{
+    color: #3e6893; 
+}
+
+img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.content form{
+    width: 70%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.content form h4{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.block-form{
+    margin:10px 0px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+.content form .block-form label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content form .block-form label:last-child{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.content form .block-form label:first-of-type{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.content form input[type=radio]{
+    display: none;
+}
+
+.content form input[type=radio]{
+    display: none;
+}
+
+.content form input[type=radio] + label{
+    background: rgba(106, 180, 255, 0.6);
+    padding: 0px 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.content form input[type=radio]:checked + label{
+    background: #6ab4ff;
+    color: #FFFFFF;
+}
+
+#data-form, #validate{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+#data-form input{
+    text-align: center;
+    width: 100%;
+    color: #262626;
+    padding: 10px;
+    border: 1px solid rgba(106, 180, 255, 0.6);
+}
+.content form input[type=submit]{
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background: none;
+    color: #6ab4ff;
+    border: 1px solid #6ab4ff;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.content form input[type=submit]:hover{
+    cursor: pointer;
+    border: 1px solid #3e6893;
+    background: #3e6893;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.resultat-content{
+    display: flex;
+    padding: 50px;
+}
+
+aside{
+    width: 30%;
+    max-width: 260px;
+}
+
+aside h3{
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+aside form label{
+    margin-top: 20px;
+}
+
+aside form .result-data{
+    margin-bottom: 10px;
+}
+
+aside form input, .c-input{
+    margin-top: 5px;
+    width: 100%;
+    color: #262626;
+    padding: 10px;
+    border: 1px solid rgba(106, 180, 255, 0.6);
+    font-family: 'Open-Sans', sans-serif;
+}
+
+.c-input{
+    font-size: 13px;
+    background: #FFFFFF;
+}
+
+aside form input:focus{
+    outline: none;
+}
+
+.erreur-http{
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.erreur-http .number{
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 10em;
+    color: rgba(106, 180, 255, 0.6);
+}
+
+.erreur-http .title{
+    font-family: 'Open-Sans', sans-serif;
+    color: #262626;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .content form .block-form{
+        display: block;
+        margin: 10px 0px 100px 0px;
+    }
+
+    .content form .surface{
+        margin-bottom: 50px;
+    }
+
+    .content form .block-form label:first-of-type, .content form .block-form label:last-child{
+        border-radius: 0px;
+    }
+
+    .content form input[type=radio] + label{
+        padding: 10px 0px;
+    }
+
+    .resultat-content{
+        display: block;
+    }
+
+    aside{
+        width: 100%;
+        max-width: none;
+    }
+
+    aside h2{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-height: 715px) {
+    .credits{
+        position: inherit;
+        margin-top: 20px;
+    }
+}
