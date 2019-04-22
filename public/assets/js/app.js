@@ -60,3 +60,10 @@ function submitEvt(evt){
         }
     }
 }
+
+function subSend() {
+  if(window.location.search){
+    window.location = '/resultat';
+  }
+}
+subSend();
