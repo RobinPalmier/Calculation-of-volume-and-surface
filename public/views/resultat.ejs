@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+<div class="resultat-content">
+    <aside>
+        <h2>Valeurs et résultats :</h2>
+        <h3>(Valeurs en cm)</h3>
+        <form class="resultat">
+            <%if (data.type === 'Cube') { %>
+            <div class="result-data">
+                <label for="">Côté du <%= data.type.toLowerCase() %> :</label>
+                <input type="text" id="" value="<%= data.coteCube %> cm" readonly>
+            </div>
+            <div class="result-data">
+                <label for=""><%= data.calcul %> du <%= data.type.toLowerCase() %> :</label>
+                <div class="c-input"><%= data.resultat %> cm<sup><%= unite %></sup></div>
+            <% } else if (data.type === 'Cylindre') { %>
+            <div class="result-data">
+                <label for="">Rayon du <%= data.type.toLowerCase() %> :</label>
+                <input type="text" id="" value="<%= data.rayonCylindre %> cm" readonly>
+            </div>
+            <div class="result-data">
+                <label for="">Hauteur du <%= data.type.toLowerCase() %> :</label>
+                <input type="text" id="" value="<%= data.hauteurCylindre %> cm" readonly>
+            </div>
+            <%if (data.calcul === 'Surface') {%>
+            <div class="result-data">
+                <label for="">Surface latérale du <%= data.type.toLowerCase() %> :</label>
+                <div class="c-input"><%= data.surfaceLateral %> cm<sup><%= unite %></sup></div>
+            </div>
+            <div class="result-data">
+                <label for="">Surface des extrémités du <%= data.type.toLowerCase() %> :</label>
+                <div class="c-input"><%= data.surfaceCote %> cm<sup><%= unite %></sup></div>
+            </div>
+            <% } %>
+            <div class="result-data">
+                <label for=""><%= data.calcul %> totale du <%= data.type.toLowerCase() %> :</label>
+                <div class="c-input"><%= data.resultat %> cm<sup><%= unite %></sup></div>
+            </div>
+            <% } else if (data.type === 'Sphere') { %>
+            <div class="result-data">
+                <label for="">Rayon de la <%= data.type.toLowerCase() %> :</label>
+                <input type="text" id="" value="<%= data.rayonSphere %> cm" readonly>
+            </div>
+            <div class="result-data">
+                <label for=""><%= data.calcul %> de la <%= data.type.toLowerCase() %> :</label>
+                <div class="c-input"><%= data.resultat %> cm<sup><%= unite %></sup></div>
+            </div>
+            <% } %>
+        </form>
+    </aside>
+    <div class="representation">
+
+    </div>
+</div>
+<% include ./partials/footer %>

@@ -1,6 +1,6 @@
 const database = require('./db_connect');
 module.exports = {
-  checkDB(type, calcul, value){
+  checkDB(type, calcul, value, success){
 
     let checkCalcul = calcul.calcul;
     let checkType = type.typeObjet;
@@ -14,10 +14,10 @@ module.exports = {
               console.log(err.message);
           }
           else if(results.length === 0){
-            console.log("Existe pas en BDD");
+            success(null);
           }
           else{
-              console.log(results);
+              success(results);
           }
       });
         break;
@@ -30,10 +30,10 @@ module.exports = {
               console.log(err.message);
           }
           else if(results.length === 0){
-            console.log("Existe pas en BDD");
+            success(null);
           }
           else{
-              console.log(results);
+              success(results);
           }
         });
     break;
@@ -45,10 +45,10 @@ module.exports = {
           console.log(err.message);
       }
       else if(results.length === 0){
-        console.log("Existe pas en BDD");
+        success(null);
       }
       else{
-          console.log(results);
+          success(results);
       }
     });
       break;

@@ -6,5 +6,10 @@ let isFloat = value => {
     return NaN;
 }
 
+let recupFromDatabase = response => {
+  return response;
+}
+
 // Exports :
 exports.isFloat = isFloat;
+exports.recupFromDatabase = recupFromDatabase;

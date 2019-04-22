@@ -56,7 +56,7 @@ h1{
 }
 
 .credits a:hover{
-    color: #3e6893; 
+    color: #3e6893;
 }
 
 img{
@@ -160,8 +160,13 @@ img{
 }
 
 aside{
-    width: 30%;
-    max-width: 260px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+aside h2{
+    text-align: center;
 }
 
 aside h3{
